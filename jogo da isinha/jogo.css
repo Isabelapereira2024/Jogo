@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#gameArea {
+    width: 800px;
+    height: 400px;
+    background: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+#playerPaddle, #computerPaddle, #ball {
+    position: absolute;
+}
+
+#playerPaddle {
+    width: 10px;    
+    height: 100px;
+    background: #fff;
+    bottom: 0;
+    left: 20px;
+}
+
+#computerPaddle {
+    width: 10px;
+    height: 100px;
+    background: #fff;
+    top: 0;
+    right: 20px;
+}
+
+#ball {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+}
