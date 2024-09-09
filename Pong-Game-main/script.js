@@ -35,7 +35,7 @@ var Ai = {
             y: (this.canvas.height / 2) - 35,
             score: 0,
             move: DIRECTION.IDLE,
-            speed: 11
+            speed: 15
         };
     }
 };
@@ -55,7 +55,7 @@ var Game = {
         this.ai = Ai.new.call(this, 'right');
         this.ball = Ball.new.call(this);
  
-        this.ai.speed = 5;
+        this.ai.speed = 9;
         this.running = this.over = false;
         this.turn = this.ai;
         this.timer = this.round = 0;
@@ -98,7 +98,7 @@ var Game = {
         Pong.draw();
  
         // Change the canvas font size and color
-        this.context.font = '50px Courier New';
+        this.context.font = '40px Courier New';
         this.context.fillStyle = this.color;
  
         // Draw the rectangle behind the 'Press any key to begin' text.
@@ -113,7 +113,7 @@ var Game = {
         this.context.fillStyle = '#ffffff';
  
         // Draw the 'press any key to begin' text
-        this.context.fillText('Press any key to begin',
+        this.context.fillText('Pressione qualquer tecla para começar',
             this.canvas.width / 2,
             this.canvas.height / 2 + 15
         );
@@ -196,9 +196,9 @@ var Game = {
                 // If there is another round, reset all the values and increment the round number.
                 this.color = this._generateRoundColor();
                 this.player.score = this.ai.score = 0;
-                this.player.speed += 5.5;
+                this.player.speed += 5.9;
                 this.ai.speed += 1;
-                this.ball.speed += 1;
+                this.ball.speed += 3;
                 this.round += 1;
  
             }
